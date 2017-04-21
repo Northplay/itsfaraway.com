@@ -6,6 +6,8 @@
 @import "_mixins";
 @import "_flex";
 
+@import "blocks/_newsletter";
+
 html {
   font-size: 62.5%;
   font-family: $font_family_primary;
