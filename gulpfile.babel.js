@@ -27,10 +27,10 @@ import autoprefixer from 'gulp-autoprefixer';
 import bs from 'browser-sync';
 
 const site = {
-  title: 'Startover',
-  description: 'Startover is a boilerplate for developing static websites. With Startover you don\'t have to start over!',
-  keywords: 'boilerplate,template,site,static,js,sass,gulp',
-  url: 'https://github.com/ksmandersen/startover',
+  title: 'Farway',
+  description: 'Greetings from Farway. Book your holiday now',
+  keywords: 'faraway,game,northplay,studio',
+  url: 'https://itsfaraway.com',
   fb: {
     appName: '',
     appId: ''
