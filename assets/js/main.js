@@ -2,7 +2,15 @@ var $ = require('jquery');
 var Ladda = require('ladda');
 var Retina = require('retina.js').Retina;
 
+const trackEvent = function(a, b, c) {
+  if (ga !== undefined) {
+    ga('send', 'event', a, b, c);
+  }
+}
+
 const handle_newsletter_submit = function(e) {
+  trackEvent('Button', 'Click', 'Subscribe');
+
   e.preventDefault();
   var $email = $(this).find('input[name=email]');
   var $submit = $(this).find('input[type=submit]');
@@ -33,11 +41,13 @@ const handle_newsletter_submit = function(e) {
       $('.newsletter__form').hide();
       $('.newsletter__thanks').show();
       Ladda.stopAll();
+      trackEvent('Subscribe', 'Completed', '');
     },
     error: function (xhr, status, error) {
       $email.prop('disabled', false);
       $submit.prop('disabled', false);
       Ladda.stopAll();
+      trackEvent('Subscribe', 'Failed', '');
     }
   });
 };
