@@ -66,9 +66,10 @@
   }
 
   @include e(thanks) {
+    color: $color_sand;
+    @include rem(font-size, 3.4rem);
+    @include rem(line-height, 3.8rem);
     font-weight: $font_weight_heavy;
-    @include rem(font-size, 1.3rem);
-    @include rem(line-height, 1.3rem);
 
     display: none;
     margin-top: 20px;
