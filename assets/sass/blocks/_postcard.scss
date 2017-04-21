@@ -1,0 +1,18 @@
+@include b(postcard) {
+  @include flex_container;
+  display: flex;
+  padding-top: 140px;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 100%;
+    height: auto !important;
+  }
+}
+
+@include breakpoint(600px) {
+  @include b(postcard) {
+    padding: 40px 20px 0 20px;
+  }
+}

@@ -3,13 +3,14 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin: 100px auto;
+  margin: 60px auto;
 
   @include e(title) {
-    color: $color_purple;
-    @include rem(font-size, 2.5rem);
+    color: $color_brown;
+    @include rem(font-size, 3rem);
     @include rem(line-height, 3.3rem);
     font-weight: $font_weight_heavy;
+    margin-bottom: 20px;
   }
 
   @include e(about) {
@@ -24,44 +25,43 @@
   }
 
   @include e(form) {
-    margin-top: 20px;
+    margin-top: 40px;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
   }
 
   @include e(email) {
     outline: none;
-    background-color: rgb(235, 235, 235);
-    border: 2px solid rgb(224, 224, 224);
-    border-right: none;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    @include rem(font-size, 1.3rem);
-    @include rem(line-height, 1.3rem);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: darken($color_sand, 20%);
+    font-weight: 400;
+    @include rem(font-size, 3.4rem);
+    @include rem(line-height, 3.4rem);
 
-    padding: 10px 15px 10px 20px;
-    margin: 0;
-
-    &::placeholder {
-      color: rgb(189, 189, 189);
+    @include placeholder {
+      color: $color_sand;
     }
+
+    padding: 12px 15px;
   }
 
   @include e(submit) {
     appearance: none;
     outline: none;
-    background-color: $color_purple;
-    color: white;
+    background-color: $color_blue_deep;
+    color: $color_blue_light;
     cursor: pointer;
     border: none;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    @include rem(font-size, 1.3rem);
-    @include rem(line-height, 1.3rem);
+    @include rem(font-size, 2.3rem);
+    @include rem(line-height, 2.3rem);
 
-    margin-left: -4px;
-    padding: 15px 20px;
+    padding: 0px 40px;
+    margin-left: 20px;
 
     &:hover {
-      background-color: darken($color_purple, 10%);
+      background-color: darken($color_blue_deep, 10%);
     }
   }
 
@@ -75,10 +75,26 @@
   }
 }
 
-@include breakpoint(330px) {
+@include breakpoint(600px) {
   .newsletter {
+    padding: 0 10px;
+    margin: 60px auto;
+
+    @include e(form) {
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin: 0;
+    }
+
     @include e(email) {
-      padding-right: 0;
+      width: 100%;
+    }
+
+    @include e(submit) {
+      margin-left: 0;
+      margin-top: 20px;
+      width: 100%;
+      padding: 20px 0;
     }
   }
 }

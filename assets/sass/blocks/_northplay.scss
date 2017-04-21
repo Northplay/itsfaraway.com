@@ -1,0 +1,12 @@
+@include b(northplay) {
+  @include flex_container;
+  display: flex;
+  padding: 140px 0;
+  justify-content: center;
+}
+
+@include breakpoint(600px) {
+  @include b(northplay) {
+    padding: 20px 10px;
+  }
+}

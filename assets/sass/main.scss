@@ -6,8 +6,6 @@
 @import "_mixins";
 @import "_flex";
 
-@import "blocks/_newsletter";
-
 html {
   font-size: 62.5%;
   font-family: $font_family_primary;
@@ -17,8 +15,19 @@ body, p, a, span, li, h1, h2, h3, h4 {
   -webkit-font-smoothing: antialiased;
 }
 
-@include b(container) {
-  width: 100%;
+body {
+  color: #e89b48;
 }
 
-@import "blocks/_main";
+@include b(container) {
+  width: 100%;
+  background-image: url(/images/background.jpg);
+  background-color: #e89b48;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: scroll;
+}
+
+@import "blocks/_postcard";
+@import "blocks/_newsletter";
+@import "blocks/_northplay";
