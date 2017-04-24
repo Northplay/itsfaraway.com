@@ -28,7 +28,7 @@ import bs from 'browser-sync';
 
 const site = {
   title: 'Farway',
-  description: 'Greetings from Farway. Book your holiday now',
+  description: 'Greetings from Faraway. Book your holiday now',
   keywords: 'faraway,game,northplay,studio',
   url: 'https://itsfaraway.com',
   fb: {
